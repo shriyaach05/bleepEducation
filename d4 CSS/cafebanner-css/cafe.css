@@ -1,0 +1,78 @@
+body{
+            background-color: rgb(40, 18, 7);
+            height: 100vh;
+        }
+
+body:hover{
+    background-image: url('https://images.pexels.com/photos/37174129/pexels-photo-37174129.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}     
+
+#title h1{
+    text-align: center;
+    color: rgb(61, 32, 21);
+    position: absolute;
+    top: 250px;
+    left: 380px;
+    font-size: 60px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#title p{
+    position: absolute;
+    color:rgb(47, 25, 19);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 340px;
+    left: 435px;
+    font-size: 20px;
+}
+
+#spcl h2{
+    position:absolute;
+    color:rgb(225, 194, 102);
+    top:230px;
+    left:130px;
+    font-size:40px
+}
+#spcl p{
+    position: absolute;
+    color: black;
+    top:230px;
+    left:130px;
+}
+
+#coffee{
+    position: absolute;
+    top: 240px;
+    left: 290px;
+}
+#brownie{
+    position: absolute;
+    top: 260px;
+    left: 675px;
+}
+
+#menu{
+    position: absolute;
+    top: 400px;
+    left: 380px;
+    color: rgb(17, 15, 10);
+    font-family: Arial, sans-serif;
+}
+
+#imgs img {
+    position: absolute;
+    transition: transform 0.4s;
+}
+#imgs img:hover {
+    transform: translateY(-30px) scale(1.1)
+}
+
+#contact{
+    position:absolute;
+    text-align: right;
+    left: 650px;
+}

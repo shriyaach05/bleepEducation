@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(175, 175, 186);
+
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .product{
+            height: 300px;
+            border: 0px solid rgb(80, 5, 5);
+            border-radius: 20px;
+            width: 250px;
+            padding: 12px;
+            margin-bottom: 15px;
+
+            text-align: center;
+            box-shadow: 4px 4px 9px black;
+        }
+
+        .product hover{
+            color:white;
+            background-color: brown;
+            transition: 2s;
+            transform: scalre(1.02);
+        }
+
+        .product img{
+            width: 100%;
+            height: 160PX;
+            object-fit: cover;
+
+            border-radius: 12px;
+        }
+
+        .product button{
+            background-color: rgb(68, 68, 119);
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            width: 90%
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="product">
+        <img src="https://images.pexels.com/photos/3597768/pexels-photo-3597768.jpeg" height="200" width="200">
+        <h2>camera</h2>
+        <p>$20000</p>
+        <button>buy now</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.pexels.com/photos/30428610/pexels-photo-30428610.jpeg" height="200" width="200">
+        <h2>headphone</h2>
+        <p>$1500</p>
+        <button>buy now</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.pexels.com/photos/36146714/pexels-photo-36146714.jpeg" height="200" width="200">
+        <h2>plushie</h2>
+        <p>$999</p>
+        <button>buy now</button>
+    </div>
+
+    <div class="product">
+        <img src="https://i.pinimg.com/1200x/d1/d0/ab/d1d0abb1d6c574fa9e4860ecd3fbdac8.jpg" height="200" width="200">
+        <h2>mini bottle</h2>
+        <p>$1299</p>
+        <button>buy now</button>
+    </div>
+</body>
+</html>

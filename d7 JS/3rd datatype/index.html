@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // datatype 
+        // 1. string: anything under quotes "" or ''
+        let email = "abc@gmail.com"
+        let city = 'mumbai'
+        // InBuild Methods:features of programmin lang which we can use directly without writing any code
+        //  toUpperCase(), toLowerCase(), length, indexOf(), slice(), replace()
+
+        console.log(typeof(city))
+
+        // 2. number: any number without quotes
+        let age = 20
+        console.log(typeof(age))
+        let price = 100.50
+        console.log(typeof(price))
+
+        // 3. boolean: true or false
+        let NetflixSub = true
+        console.log(typeof(NetflixSub))
+        let loginStatus = false
+        console.log(typeof(loginStatus))
+
+        // 4. undefined: when we declare a variable but not assign any value to it
+        let score
+        console.log(typeof(score))
+
+        // 5. null: when we assign a variable with null value
+        let discount = null
+        console.log(typeof(discount))
+
+        // data type 2: multiple data
+        // 1. array: collection of multiple data
+        let fruits = ["apple", "banana", "mango", "grapes"]
+        console.log(fruits[0])
+
+        // 2. object: collection of key-value pairs
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        }
+
+        // 3. function: block of code which can be reused
+        function greet() {  
+            console.log("Hello World")
+        }
+        greet() // calling the function
+
+        // 4. symbol: unique and immutable data type
+        let sym1 = Symbol("id") 
+    </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgb(211, 211, 220);
+        }
+
+        nav{
+            background-color: rgb(91, 91, 124);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .home{
+            display: flex;
+            gap: 26px;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 22px; 
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover{
+            color: rgb(35, 35, 72);
+            transition: 0.5s;
+        }
+
+
+        .dashboard{
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .dashboard h2{
+            color: black;
+            margin-bottom: 30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .all-cards{
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card:hover{
+            scale: 1.1;
+            transition: 1s;
+        }
+
+        .card{
+            color: white;
+            width: 220px;
+            height:100px;
+            border-radius: 16px;
+            padding: 28px;
+            background-color: rgb(41, 41, 65);
+            font-size: 18px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            box-shadow: 1px 1px;
+        }
+
+
+        .employee{
+            margin: 50px auto;
+            width: 90%;
+        }
+
+        .employee-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .employee-header h2{
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .employee-header button{
+            border: none;
+            border-radius: 7px;
+            padding: 5px 10px;
+            background-color: rgb(123, 123, 159);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+
+            cursor: pointer;
+        }
+
+        .employee-header button:hover{
+            background-color: rgb(41, 41, 65);
+            color: rgb(183, 186, 205);
+            transition: 0.5s;
+        }
+
+        table{
+            border-radius: 5px;
+            background-color: rgb(170, 170, 194);
+
+            width: 100%;
+            font-size: 18px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        th{
+            border: 1px solid rgb(23, 23, 47);
+            border-radius: 5px;
+        }
+        td{
+            border: 1px solid rgb(23, 23, 47);
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        .employee tr:hover{
+            background-color: #e8e8ef;
+        }
+
+        .department{
+            margin: 50px auto;
+            width: 90%;
+        }
+
+        .department h2{
+            text-align: center;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 70px;
+            margin-bottom: 30px;
+        }
+
+        .logout{
+            margin: 50px auto;
+            width: 90%;
+            text-align: left;
+        }
+
+        .logout h2{
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 70px;
+            margin-bottom: 10px;
+        }
+
+        .logout p{
+            color: black;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+        }
+        .logout button{
+            border: none;
+            border-radius: 7px;
+            padding: 5px 10px;
+            background-color: rgb(123, 123, 159);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .logout button:hover{
+            color: rgb(183, 186, 205);
+            transition: 0.5s;
+        }
+
+        footer{
+            margin: 50px auto;
+            width: 90%;
+            text-align: left;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div style="display:flex; align-items:center; gap:15px;">
+                <img src="logo.png" alt="logo" style="height:40px; width:40px; border-radius:8px;">
+                <h1>Employee Admin</h1>
+            </div>
+            
+            <div class="home">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#employee">Employee</a>
+                <a href="#department">Department</a>
+                <a href="#logout">Logout</a>
+            </div>
+        </nav>
+        
+    </header>
+
+    <main>
+        <div class="dashboard" id="dashboard">
+            <h2>Dashboard Cards</h2>
+
+            <div class="all-cards">
+                <div class="card">
+                    <h3>Total Employee</h3>
+                    <p>40</p>
+                </div>
+
+                <div class="card">
+                    <h3>Active Employees</h3>
+                    <p>37</p>
+                </div>
+
+                <div class="card">
+                    <h3>Departments</h3>
+                    <p>5</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <section class="employee" id="employee">
+
+            <div class="employee-header">
+                <h2>Employee Table</h2>
+                <button>add employee</button>
+            </div>
+
+                <table>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email-ID</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>001</td>
+                        <td>Alex Baker</td>
+                        <td>alex@gmail.com</td>
+                        <td>IT</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>John Dae</td>
+                        <td>john@gmail.com</td>
+                        <td>Finance</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Patrick </td>
+                        <td>patrick@gmail.com</td>
+                        <td>Marketing</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>004</td>
+                        <td>Grace</td>
+                        <td>grace@gmail.com</td>
+                        <td>Design</td>
+                        <td>Active</td>
+                    </tr>
+
+                    <tr>
+                        <td>005</td>
+                        <td>Patricia Rigg</td>
+                        <td>patricia@gmail.com</td>
+                        <td>Sales</td>
+                        <td>Inactive</td>
+                    </tr>
+
+                </table>
+
+        </section>
+
+
+        <div class="department" id="department">
+            <h2>Departments</h2>
+
+            <table>
+
+                <tr>
+                    <th>Department Name</th>
+                    <th>Employees</th>
+                </tr>
+                <tr>
+                    <td>IT</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Finance</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Marketing</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Design</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Sales</td>
+                    <td>5</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="logout" id="logout">
+            <h2>Logout</h2>
+            <p>Are you sure you want to logout?</p>
+
+            <button>Logout</button>
+            <button>Cancel</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span>2026</span> Employee Admin Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- print numbers from 1 to 10 -->
+    <!-- console.log(1); -->
+    <!-- console.log(2); -->
+    <!-- // rule: condition is true loop will run
+    // 1. for (start; condition; increment/decrement) -->
+    
+    <script>
+        for(let i = 1; i <= 10; i++){
+            console.log("the value of i is: ", i)
+        }
+
+        for(let j = 10; j >= 1; j--){
+            console.log("the value of j is: ", j)
+        }
+
+        // rule: condition is true loop will run
+        // 2. while (condition) {task} loop
+
+        let count = 1
+        while(count<=5){
+            console.log("login attempt: ", count)
+            count++
+        }
+
+        // 3. do while loop
+        // let number = 1
+        // do{
+        //     // task
+        //     console.log("gud nyt")
+        // }while(number < 5)
+
+        //  array - use for loop to print all the elements of an array
+
+        const fruits = ["apple", "cherry", "mango", "grapes", "kiwi"]
+
+        for(let k = 0; k < fruits.length - 1; k++)
+        {
+            console.log(fruits[k])
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .products{
+            display: grid;
+
+            /* grid-template-columns: 200px 200px 200px; */
+
+            /* grid-template-columns: 2fr 1fr;
+            grid-template-columns: repeat(num of colmn, size of each colmn); */
+
+            grid-template-columns: repeat autofit(6, 2fr);
+        }
+        .box{
+            background-color: rgb(94, 22, 22);
+            border: 1px solid black;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="products">
+        <div class="box">product 1</div>
+        <div class="box">product 2</div>
+        <div class="box">product 3</div>
+        <div class="box">product 4</div>
+        <div class="box">product 5</div>
+        <div class="box">product 6</div>
+    </div>
+</body>
+</html>
