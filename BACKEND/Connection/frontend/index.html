@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>login</h1>
+
+    <form id="loginForm">
+        name: <input type="text" placeholder="enter ur name" id="name"> <br><br>
+        email: <input type="text" placeholder="enter ur email" id="email"> <br><br>
+        <button type="submit">submit/login</button>
+    </form>
+    <p id="res"></p>
+
+    <script>
+        document.getElementById("loginForm").addEventListener('submit', function(event){
+            
+            // avoid reloading of page / form
+            event.preventDefault() 
+
+            const name = document.getElementById("name").value
+            const email = document.getElementById("email").value
+            
+            // connection - to backend
+            fetch('http://localhost:3000/login', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({name, email})
+            })
+
+            .then(response => response.json())
+            .then(data => document.getElementById('res').textContent = data.message)
+            .catch(error => console.error('Error', error))
+        })
+    </script>
+</body>
+</html>
