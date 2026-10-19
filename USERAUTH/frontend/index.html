@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #686c69;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card {
+            max-width: 360px;
+            background: #1c0a0a;
+            border-radius: 12px;
+            padding: 16px 16px 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 14px 0 22px;
+            color: #b8c4b9;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 0px;
+            border-radius: 3px;
+            font-size: .9rem;
+            background-color: #2e2f2e;
+        }
+        input:focus { outline: 2px solid #45564d; border-color: #323e38; }
+
+        .buttons { display: flex; gap: 4px; }
+
+        button {
+            padding: 8px 10px;
+            background: #17281f;
+            color: #ebe1e1;
+            border: none;
+            border-radius: 4px;
+            font-size: .85rem;
+            cursor: pointer;
+        }
+        button:hover { background: #3a4640; }
+        #responseMsg { margin: 14px 0 0; font-size: .9rem; color: #ebe1e1; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Register/Login</h1>
+        
+    
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="password">
+    
+        <div class="buttons">
+            <button type="button" id="registerBtn" onclick="register()">Register</button>
+            <button type="button" id="loginBtn" onclick="login()">Login</button>
+        </div>
+    
+        <p id="responseMsg"></p>
+     </div>
+
+    
+    <script>
+        async function register() {     
+            const username = document.getElementById("name").value
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+
+
+            //Frontend - Backend Connection
+            const response = await fetch('http://localhost:3000/register',{
+                method:"POST" , 
+                headers:{
+                    "Content-Type":"application/json"},
+                body : JSON.stringify({username, email, password})
+            });
+            const result = await response.json();
+            document.getElementById("responseMsg").innerText = result.message
+
+         }          
+
+
+        async function login() {
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+
+            //Frontend - Backend Connection
+            const response = await fetch('http://localhost:3000/login',{
+                method:"POST" , 
+                headers:{"Content-Type":"application/json"},
+                body : JSON.stringify({email , password})
+            });
+            const result = await response.json();
+            document.getElementById("responseMsg").innerText = result.message
+        }
+    </script>
+</body>
+</html>
